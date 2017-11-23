@@ -26,6 +26,7 @@ import java.util.ArrayList;
  */
 
 public class AdapterNhanVien extends BaseAdapter {
+    private String DATABASE_NAME = "database";
     Activity context;
     ArrayList<NhanVien> arrayList;
 
@@ -113,7 +114,7 @@ public class AdapterNhanVien extends BaseAdapter {
     }
 
     private void delete(int idNhanVien) {
-        SQLiteDatabase database = Database.initDatabase(context, "EmployeeDB.sqlite");
+        SQLiteDatabase database = Database.initDatabase(context, DATABASE_NAME);
         database.delete("NhanVien", "Id = ?", new String[]{idNhanVien + ""});
         arrayList.clear();
         Cursor curor = database.rawQuery("SELECT * FROM NhanVien", null);
