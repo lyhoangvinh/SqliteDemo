@@ -9,7 +9,6 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -17,12 +16,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.demo.demosqlitemaneger.DatabaseHepler.Database;
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 public class UpdateActivity extends AppCompatActivity {
-    final String DATABASE_NAME = "EmployeeDB.sqlite";
+//    private String DATABASE_NAME = "EmployeeDB.sqlite";
+    private String DATABASE_NAME = "database";
     final int RESQUEST_TAKE_PHOTO = 123;
     final int RESQUERT_CHOOSE_PHOTO = 321;
     int id = -1;

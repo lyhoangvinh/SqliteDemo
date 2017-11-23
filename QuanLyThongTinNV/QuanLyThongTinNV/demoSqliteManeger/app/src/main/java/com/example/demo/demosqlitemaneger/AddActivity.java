@@ -16,12 +16,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.demo.demosqlitemaneger.DatabaseHepler.Database;
+
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 public class AddActivity extends AppCompatActivity {
-    final String DATABASE_NAME = "EmployeeDB.sqlite";
+//    private String DATABASE_NAME = "EmployeeDB.sqlite";
+private String DATABASE_NAME = "database";
     final int RESQUEST_TAKE_PHOTO = 123;
     final int RESQUERT_CHOOSE_PHOTO = 321;
 

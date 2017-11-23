@@ -1,4 +1,4 @@
-package com.example.demo.demosqlitemaneger;
+package com.example.demo.demosqlitemaneger.DatabaseHepler;
 
 import android.app.Activity;
 import android.content.Context;

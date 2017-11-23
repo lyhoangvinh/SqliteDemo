@@ -11,11 +11,15 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.demo.demosqlitemaneger.DatabaseHepler.Database;
+
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     //Tạo folder assets bằng cách chuột pãi java-> New-> Folder-> AssetsFolder
-    final String DATABASE_NAME = "EmployeeDB.sqlite";
+//    private String DATABASE_NAME = "EmployeeDB.sqlite";
+    private String DATABASE_NAME = "database";
+
     SQLiteDatabase database;
     ListView myListView;
     ArrayList<NhanVien> arrayList;
@@ -45,16 +49,18 @@ public class MainActivity extends AppCompatActivity {
     private void readData(){
         database = Database.initDatabase(this, DATABASE_NAME);
         Cursor cursor = database.rawQuery("SELECT * FROM NhanVien", null);
-        arrayList.clear();
-        for (int i=0; i<cursor.getCount(); i++){
-            cursor.moveToPosition(i);
-            int id = cursor.getInt(0);
-            String ten = cursor.getString(1);
-            String sdt = cursor.getString(2);
-            byte[] anh = cursor.getBlob(3);
-            arrayList.add(new NhanVien(id, ten, sdt, anh));
+        if (cursor!=null){
+            arrayList.clear();
+            for (int i = 0; i < cursor.getCount(); i++) {
+                cursor.moveToPosition(i);
+                int id = cursor.getInt(0);
+                String ten = cursor.getString(1);
+                String sdt = cursor.getString(2);
+                byte[] anh = cursor.getBlob(3);
+                arrayList.add(new NhanVien(id, ten, sdt, anh));
+            }
+            adapterNhanVien.notifyDataSetChanged();
         }
-        adapterNhanVien.notifyDataSetChanged();
     }
     boolean doubleBackToExitPressedOnce = false;
     @Override

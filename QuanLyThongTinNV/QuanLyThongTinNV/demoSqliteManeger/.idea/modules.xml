@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\ADMIN\Documents\SqliteDemo\QuanLyThongTinNV\QuanLyThongTinNV\demoSqliteManeger\app\app.iml" filepath="C:\Users\ADMIN\Documents\SqliteDemo\QuanLyThongTinNV\QuanLyThongTinNV\demoSqliteManeger\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/demoSqliteManeger.iml" filepath="$PROJECT_DIR$/demoSqliteManeger.iml" />
+      <module fileurl="file://C:\Users\ADMIN\Documents\SqliteDemo\QuanLyThongTinNV\QuanLyThongTinNV\demoSqliteManeger\demoSqliteManeger.iml" filepath="C:\Users\ADMIN\Documents\SqliteDemo\QuanLyThongTinNV\QuanLyThongTinNV\demoSqliteManeger\demoSqliteManeger.iml" />
     </modules>
   </component>
 </project>
