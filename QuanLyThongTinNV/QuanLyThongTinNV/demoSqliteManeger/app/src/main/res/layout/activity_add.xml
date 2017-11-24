@@ -9,7 +9,7 @@
         android:id="@+id/imageViewHinh"
         android:layout_width="113dp"
         android:layout_height="106dp"
-        app:srcCompat="@drawable/aihara"
+        android:src="@mipmap/ic_launcher_round"
         android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
